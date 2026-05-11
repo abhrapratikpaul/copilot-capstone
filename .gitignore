@@ -25,6 +25,3 @@ Thumbs.db
 .env
 .env.*
 .vscode/mcp.json
-
-# Misc
-Sample-project/**
