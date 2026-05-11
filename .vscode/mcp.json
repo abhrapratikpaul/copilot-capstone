@@ -1,0 +1,36 @@
+{
+    "servers": {
+        "github": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-github"
+            ],
+            "env": {
+                "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+            }
+        },
+        "epam-confluence": {
+            "command": "uvx",
+            "args": [
+                "mcp-atlassian"
+            ],
+            "env": {
+                "CONFLUENCE_URL": "https://kb.epam.com",
+                "CONFLUENCE_PERSONAL_TOKEN": "${env:EPAM_CONFLUENCE_PERSONAL_TOKEN}",
+                "CONFLUENCE_SSL_VERIFY": "false"
+            }
+        },
+        "epam-jira": {
+            "command": "uvx",
+            "args": [
+                "mcp-atlassian"
+            ],
+            "env": {
+                "JIRA_URL": "https://jiraeu.epam.com",
+                "JIRA_PERSONAL_TOKEN": "${env:EPAM_JIRA_PERSONAL_TOKEN}",
+                "JIRA_SSL_VERIFY": "false"
+            }
+        }
+    }
+}
